@@ -11,3 +11,10 @@ function i_like() {
         "I like to drink pepsi or beer.")
     document.querySelector('p').textContent = "I have many favorite foods. I like to eat salmon, broccoli and potatoes. I like to drink pepsi or beer."
 }
+
+var str = "Supercalifragilisticexpialidocious";
+console.log(str.length);
+
+console.log(typeof (4 + 3));
+
+console.log(typeof BigInt(100) === 'bigint');
