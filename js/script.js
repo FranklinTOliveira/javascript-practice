@@ -35,8 +35,7 @@ alert(Math.max(x, y));
 // If so, prompt the user again to input a number
 
 if (x === Number.NaN) {
+    prompt("Enter an actual number.")
+ } else if (y === Number.NaN) {
     prompt("Enter an actual number.");
-  else if (y === Number.NaN) {
-        prompt("Enter an actual number.");
-    }
 }
