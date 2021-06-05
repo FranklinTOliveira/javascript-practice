@@ -1,13 +1,31 @@
 // JavaScript source code
 
-function my_name() {
-    console.log("My name is Franklin Oliveira.")
-    document.querySelector('p').textContent="My name is Franklin Oliveira."
+function job() {
+    return new Promise(function (resolve, reject) {
+        reject();
+    });
 }
 
+let promise = job();
 
-function i_like() {
-    console.log("I have many favorite foods.", '\n', "I like to eat salmon, broccoli and potatoes.", '\n',
-        "I like to drink pepsi or beer.")
-    document.querySelector('p').textContent = "I have many favorite foods. I like to eat salmon, broccoli and potatoes. I like to drink pepsi or beer."
-}
+promise
+
+    .then(function () {
+        console.log('Success 1');
+    })
+
+    .then(function () {
+        console.log('Success 2');
+    })
+
+    .then(function () {
+        console.log('Success 3');
+    })
+
+    .catch(function () {
+        console.log('Error 1');
+    })
+
+    .then(function () {
+        console.log('Success 4');
+    });
