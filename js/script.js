@@ -1,5 +1,6 @@
 // JavaScript source code
 
+
 function selectRandomFact(data) {
     // we now have the data in json format
     console.log(data);
