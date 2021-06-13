@@ -12,45 +12,94 @@ function i_like() {
     document.querySelector('p').textContent = "I have many favorite foods. I like to eat salmon, broccoli and potatoes. I like to drink pepsi or beer."
 }
 
-var str = "Supercalifragilisticexpialidocious";
-console.log(str.length);
+// CHALLENGE 1
+// Prompt the user for their first name
+var firstname = prompt("Please enter your first name");
 
-console.log(typeof (4 + 3));
+if (firstname == null || firstname == "") {
+    txt = "User cancelled the prompt.";
+} else {
+    txt = "Hello " + firstname + "! How are you today?";
+}
 
-console.log(typeof BigInt(100) === 'bigint');
+// Store their input to a variable
 
-// Assign STRING VALUES ONLY to all of the following variables.
-let adj1 = playful;
-let adj2 = funny;
-let adj3 = large;
-let adj4 = happy;
-let adj5 = Toy;
-let adj6 = French;
-let adverb = angrily;
-let color = white;
-let noun1 = friend;
-let noun2 = newspaper;
-let noun3 = bone;
-let noun4 = home;
-let noun5 = Cocker;
-let noun6 = person;
-let num = 11;
-let pnoun1 = Shepherds;
+var identity = document.getElementById(firstname).value;
 
-// Open your console to see the results!
-// SPOILER ALERT: KEEP SCROLLING TO VIEW THE REST OF THE CODE
+// Reverse your user’s name
 
-//Using template literals to plug in the values
-let story = `It has often been said that a dog is a man's best ${noun1}. Dogs are very ${adj1} and can be taught many ${adj2}
-tricks. A dog can be trained to carry a ${noun2} in his mouth.
-If you throw his ${noun3}, he will run and fetch it. Dogs
-will also bark ${adverb} if someone tries to break into your
-${noun4} during the night. One of the most popular canine pets
-today is the ${noun5} Spaniel. Spaniels have curly ${color}
-coats and ${adj3} ears. They also have very ${adj4}
-dispositions and live to be ${num} years old. Other popular dogs
-are ${adj5} Terriers, German ${pnoun1}, and the
-${adj6} Poodle. Every ${noun6} should have a loyal dog.`;
+function reverseString(firstname) {
+    return firstname.split('').reverse().join('');
+}
 
-//Console log the completed story
-console.log(story);
+// alert the reversed string
+
+alert(reverseString);
+
+// Challenge 2
+// Prompt for a number value (provide a default of 10)
+
+var x = prompt("Enter a Value", "10");
+var num1 = parseInt(x);
+
+// Prompt for a second number value (provide a default of 10)
+
+var y = prompt("Enter a Value", "10");
+var num2 = parseInt(y);
+
+// Convert the prompted values into integers using parseInt()
+// Add the numbers together and alert the user with the result
+
+alert(x + y);
+
+
+// Ask for the user's first name
+
+var firstname = prompt("Please enter your first name");
+
+if (firstname == null || firstname == "") {
+    txt = "User cancelled the prompt.";
+} else {
+    txt = "Hello " + firstname + "! How are you today?";
+}
+
+// Ask for the user's last name
+
+var lastname = prompt("Please enter your last name");
+
+if (lastname == null || lastname == "") {
+    txt = "User cancelled the prompt.";
+} else {
+    txt = "Hello " + lastname + "! How are you today?";
+}
+
+// Log the user's first name to the console
+
+console.log(firstname);
+
+// Alert the user's last name
+
+alert(lastname);
+
+// *BONUS* 
+// Ask for the user's birthday
+
+var birthday = prompt("Please enter your birthday");
+
+if (birthday == null || birthday == "") {
+    txt = "User cancelled the prompt.";
+} else {
+    txt = "Hello " + birthday + "! How are you today?";
+}
+
+// Ask the user to confirm their birthday input
+
+if (confirm("Is this really your birthday?")) {
+    txt = "Thank you!";
+} else {
+    txt = "Good day!";
+}
+
+// Alert the user's birthday
+
+alert(birthday);
