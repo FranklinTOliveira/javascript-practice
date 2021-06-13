@@ -26,7 +26,7 @@ if (firstname == null || firstname == "") {
 
 var identity = document.getElementById(firstname).value;
 
-// Reverse your user’s name
+// Reverse your userâ€™s name
 
 function reverseString(firstname) {
     return firstname.split('').reverse().join('');
