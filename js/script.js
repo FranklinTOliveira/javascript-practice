@@ -1,31 +1,37 @@
 // JavaScript source code
 
-function job() {
+function job(state) {
     return new Promise(function (resolve, reject) {
-        reject();
+        if (state) {
+            resolve('success');
+        } else {
+            reject('error');
+        }
     });
 }
 
-let promise = job();
+let promise = job(true);
 
 promise
 
-    .then(function () {
-        console.log('Success 1');
+    .then(function (data) {
+        console.log(data);
+
+        return job(false);
     })
 
-    .then(function () {
-        console.log('Success 2');
+    .catch(function (error) {
+        console.log(error);
+
+        return 'Error caught';
     })
 
-    .then(function () {
-        console.log('Success 3');
+    .then(function (data) {
+        console.log(data);
+
+        return job(true);
     })
 
-    .catch(function () {
-        console.log('Error 1');
-    })
-
-    .then(function () {
-        console.log('Success 4');
+    .catch(function (error) {
+        console.log(error);
     });
