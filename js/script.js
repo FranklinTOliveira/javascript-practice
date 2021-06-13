@@ -1,53 +1,31 @@
 // JavaScript source code
 
-function my_name() {
-    console.log("My name is Franklin Oliveira.")
-    document.querySelector('p').textContent = "My name is Franklin Oliveira."
+function job() {
+    return new Promise(function (resolve, reject) {
+        reject();
+    });
 }
 
+let promise = job();
 
-function i_like() {
-    console.log("I have many favorite foods.", '\n', "I like to eat salmon, broccoli and potatoes.", '\n',
-        "I like to drink pepsi or beer.")
-    document.querySelector('p').textContent = "I have many favorite foods. I like to eat salmon, broccoli and potatoes. I like to drink pepsi or beer."
-}
+promise
 
-//Daily Challenge
-//alert user is number is even or odd
-//number as argument
+    .then(function () {
+        console.log('Success 1');
+    })
 
-let isOdd = function (n) {
-    if (n % 2 === 0) {
-        return false;
-    } else {
-        return true;
-    }
-}
-let n = 1;
-alert(isOdd(n));
+    .then(function () {
+        console.log('Success 2');
+    })
 
-const input = "somepassword";
+    .then(function () {
+        console.log('Success 3');
+    })
 
-function startsWithLetter(characterCode) {
-    const firstLetterCode = characterCode.charCodeAt(0);
+    .catch(function () {
+        console.log('Error 1');
+    })
 
-    if (firstLetterCode >= 97 && firstLetterCode <= 122 || firstLetterCode >= 65 & firstLetterCode <= 90) {
-        alert("First character is a letter");
-    } else {
-        alert("First character is not a letter");
-    }
-}
-
-startsWithLetter(input);
-
-function validatePassword(password) {
-    const length = password.length;
-
-    if (length >= 6 && length <= 20) {
-        alert("Meets length requirement.");
-    } else {
-        alert("Doesn't meet length requirement.");
-    }
-}
-
-validatePassword(input);
+    .then(function () {
+        console.log('Success 4');
+    });
