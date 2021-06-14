@@ -12,31 +12,42 @@ function i_like() {
     document.querySelector('p').textContent = "I have many favorite foods. I like to eat salmon, broccoli and potatoes. I like to drink pepsi or beer."
 }
 
-// ------------ DAILY CHALLENGE ------------
-// Prompt the user for two different numbers
+//Daily Challenge
+//alert user is number is even or odd
+//number as argument
 
-let a = Number(prompt("Enter first number"));
-let b = Number(prompt("Enter second number"));
+let isOdd = function (n) {
+    if (n % 2 === 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
+let n = 1;
+alert(isOdd(n));
 
-// Convert the values to integers
-// Store the two integers as variables
+const input = "somepassword";
 
-let x = parseInt(a);
-let y = parseInt(b);
+function startsWithLetter(characterCode) {
+    const firstLetterCode = characterCode.charCodeAt(0);
 
-// Compare the two numbers
-// Alert the larger number
-
-alert(Math.max(x, y));
-
-// ------------ TAKE HOME CHALLENGE ------------
-// Add an edge case to your daily challenge code
-// Check if the user input anything other than a number
-// If so, prompt the user again to input a number
-
-if (x === Number.NaN) {
-    prompt("Enter an actual number.")
-} else if (y === Number.NaN) {
-    prompt("Enter an actual number.");
+    if (firstLetterCode >= 97 && firstLetterCode <= 122 || firstLetterCode >= 65 & firstLetterCode <= 90) {
+        alert("First character is a letter");
+    } else {
+        alert("First character is not a letter");
+    }
 }
 
+startsWithLetter(input);
+
+function validatePassword(password) {
+    const length = password.length;
+
+    if (length >= 6 && length <= 20) {
+        alert("Meets length requirement.");
+    } else {
+        alert("Doesn't meet length requirement.");
+    }
+}
+
+validatePassword(input);
