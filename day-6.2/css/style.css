@@ -1,0 +1,25 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.name_button {
+    position: relative;
+    top: 1%;
+    left: 15%;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.favorite_food {
+    position: relative;
+    top: 1%;
+    left: 65%;
+    width: 150px;
+    border: 1px solid black;
+}
+
+p {
+    position: relative;
+    top: 2%;
+    left: 15%;
+    width: auto;
+}
