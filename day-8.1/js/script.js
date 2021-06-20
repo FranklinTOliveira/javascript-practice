@@ -22,10 +22,9 @@ dog.furcolor = 'His fur is colored gray.';
 // Here I construct a button that releases my dog's bio.
 
 const present = function habeusCorpus() {
-    console.log(JSON.stringify(dog));
-    const body = dog.name + '<br/>' + d;
+
     const ghoulish = document.getElementById("bb");
-    ghoulish.innerHTML = body;
+    ghoulish.innerHTML = dog.name;
 
     const dl = document.createElement('p');
     dl.textContent = dog.legs;
